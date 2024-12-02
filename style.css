@@ -1,0 +1,193 @@
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(img/discord.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  /* Escurecer a imagem de fundo */
+    backdrop-filter: blur(3px); /* Aplica o blur (desfoque) */
+    z-index: -1;  /* Coloca o blur atrás do conteúdo */
+}
+
+header {
+    width: 100%;
+    background: transparent;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-left: 20px;
+}
+
+.nav-itens {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-itens button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-itens button a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-itens button:hover {
+    background-color: #6060ED;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #313338;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* Space for header */
+}
+
+h3.titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+
+.input input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    color: black;
+}
+
+button {
+    padding: 10px;
+    background-color: #6060ED;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover:nth-child(4) {
+    background-color: #4d4dbb;
+    padding: 15px;
+}
+
+#erro {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-itens {
+        gap: 10px;
+    }
+
+    .nav-itens button {
+        font-size: 0.9rem;
+    }
+
+    form {
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    h3.titulo {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-itens {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-itens button {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+        margin-top: 120px;
+    }
+
+    .input input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}

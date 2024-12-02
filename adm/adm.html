@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/adm/adm.css">
+    <title>Bem vindo(a)</title>
+</head>
+<body>
+    <header>
+        <h2>Bem vindo(a) novamente</h2>
+    </header>
+
+    <h1 class="titulo"></h1>
+
+    <script>
+        let nome = localStorage.getItem('nome')
+        let sobrenome = localStorage.getItem('sobrenome')
+
+        if (!nome || !sobrenome) {
+            window.location.href = 'index.html'
+        } else {
+            document.querySelector('h1').innerHTML = `Olá, ${nome} ${sobrenome}`
+        }
+
+    </script>
+</body>
+</html>

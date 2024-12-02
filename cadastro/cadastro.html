@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cadastro/cadastro.css">
+    <title>Faça seu cadastro</title>
+</head>
+<body>
+    <header>
+        <h2>Faça seu Cadastro</h2>
+
+        <div class="nav-itens">
+            <button><a href="http://127.0.0.1:5500/index.html">Login</a></button>
+            <button><a href="/cadastro/cadastro.html">Cadastro</a></button>
+        </div>
+    </header>
+    
+    <form action="" class="form">
+    <div class="container">
+        <div class="inputs">
+            <h3 class="titulo">Realize o cadastro</h3>
+        <div class="input">
+            <label for="">Nome</label>
+            <input id="nome" type="text" required>
+        </div>
+        <div class="input">
+            <label for="">Sobrenome</label>
+            <input id="sobrenome" type="text" required>
+        </div>
+        <div class="input">
+            <label for="">Senha</label>
+            <input id="senha" type="password" required>
+        </div>
+        <div class="input">
+            <label for="">Username</label>
+            <input id="username" type="text" required>
+        </div>
+        <button onclick="registro()">Enviar</button>
+        </div>
+    </div>
+    </div>
+</form>
+<script src="/cadastro/cadastro.js"></script>
+</body>
+</html>
