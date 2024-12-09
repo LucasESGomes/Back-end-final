@@ -3,26 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Administração</title>
     <link rel="stylesheet" href="/adm/adm.css">
-    <title>Bem vindo(a)</title>
 </head>
 <body>
     <header>
-        <h2>Bem vindo(a) novamente</h2>
+        <h1>Gerenciamento de Usuários</h1>
     </header>
 
-    <h1 class="titulo"></h1>
+    <main>
+        <table id="tabela-usuarios" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>RG</th>
+                    <th>E-mail</th>
+                    <th>Senha</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas da tabela serão adicionadas dinamicamente -->
+            </tbody>
+        </table>
+    </main>
 
-    <script>
-        let nome = localStorage.getItem('nome')
-        let sobrenome = localStorage.getItem('sobrenome')
+    <!-- Formulário de edição (pop-up) -->
+    <div id="form-edicao" style="display: none;">
+        <h3>Editar Usuário</h3>
+        <form id="editar-form">
+            <input type="hidden" id="edit-id">
+            <label for="edit-id">ID</label>
+            <input type="text" id="edit-username" required>
 
-        if (!nome || !sobrenome) {
-            window.location.href = 'index.html'
-        } else {
-            document.querySelector('h1').innerHTML = `Olá, ${nome} ${sobrenome}`
-        }
+            <label for="edit-nome">Nome:</label>
+            <input type="text" id="edit-nome" required>
 
-    </script>
+            <label for="edit-sobrenome">Sobrenome:</label>
+            <input type="text" id="edit-sobrenome" required>
+
+            <label for="edit-rg">RG:</label>
+            <input type="text" id="edit-rg" required>
+
+            <label for="edit-email">E-mail:</label>
+            <input type="text" id="edit-email" required>
+
+            <label for="edit-senha">Senha:</label>
+            <input type="text" id="edit-senha" required>
+            
+            <label for="edit-role">Role:</label>
+            <select id="edit-role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Salvar</button>
+            <button type="button" id="cancelar-edicao">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="adm.js"></script>
 </body>
 </html>
