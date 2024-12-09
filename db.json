@@ -1,5 +1,38 @@
 {
   "registro": [
-    
+    {
+      "id": "0a61",
+      "email": "bigneuzin@gmail.com",
+      "senha": "admTchotiSarra",
+      "role": "admin"
+    },
+    {
+      "id": "ae51",
+      "nome": "Vinicius",
+      "sobrenome": "Carvalho",
+      "rg": "8888",
+      "email": "bigneuzin@gmail.com",
+      "senha": "admTchotiSarra"
+    },
+    {
+      "id": "a436",
+      "email": "estação@gmail.com",
+      "senha": "estação1",
+      "role": "user"
+    },
+    {
+      "id": "3205",
+      "email": "bruno@gmail.com",
+      "senha": "admBruno1",
+      "role": "admin"
+    },
+    {
+      "id": "ddd5",
+      "nome": "Bruno",
+      "sobrenome": "Aguiar",
+      "rg": "1234556",
+      "email": "bruno@gmail.com",
+      "senha": "admBruno1"
+    }
   ]
 }

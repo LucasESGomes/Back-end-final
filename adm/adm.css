@@ -36,6 +36,11 @@ header{
     height: 10vh;
     width: 100vw;
     background-color: rgb(31, 36, 34);
+    color: white;
+}
+
+table {
+    color: white;
 }
 
 header h2{
